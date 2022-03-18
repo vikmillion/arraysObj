@@ -1,0 +1,32 @@
+$bgColor: green;
+$bgColorMain: grey;
+$color: red;
+$colorText: darkBlue;
+$height:20vh;
+
+@mixin font{
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.block:not(.first) {
+  background: $bgColor;
+  height: 10vh;
+  margin: 2% auto;
+}
+.first {
+  background: $bgColorMain;
+  height: 10vh;
+}
+#central-div {
+height: $height;
+@include font;
+  li {
+    color: $colorText;
+  }
+}

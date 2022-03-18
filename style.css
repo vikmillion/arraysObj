@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.block:not(.first) {
+  background: green;
+  height: 10vh;
+  margin: 2% auto;
+}
+
+.first {
+  background: grey;
+  height: 10vh;
+}
+
+#central-div {
+  height: 20vh;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#central-div li {
+  color: darkBlue;
+}
+/*# sourceMappingURL=style.css.map */
