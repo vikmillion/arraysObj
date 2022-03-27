@@ -100,7 +100,7 @@ let unicNumber2 = Array.from(new Set(nums));
 //array to Obj массив в объект
 let obj = [...arr, ...brands];
 
-//Метод reduce() применяет функцию reducer к каждому элементу массива (слева-направо), возвращая одно результирующее значение.
+//Метод reduce() применяет функцию reduce к каждому элементу массива (слева-направо), возвращая одно результирующее значение.
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 const reduceArr = nums.reduce(
   (accumulator, index, array) => accumulator + index
