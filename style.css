@@ -1,28 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
-.block:not(.first) {
-  background: green;
-  height: 10vh;
+body {
+  max-width: 1280px;
   margin: 2% auto;
 }
 
-.first {
-  background: grey;
-  height: 10vh;
+div {
+  padding: 1% 1%;
 }
 
-#central {
-  height: 20vh;
-
-  font-weight: 700;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#central li {
-  color: darkBlue;
+p:nth-child(1) {
+  font-weight: 500;
 }
 /*# sourceMappingURL=style.css.map */

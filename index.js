@@ -14,7 +14,8 @@ const readAr = () => {
 
 let nums = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
 let nums2 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
-let nums3 = [9, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+let nums3 = [9, 5, 6, 7, 8, 9, 1, 2, 3, 4, 11, 5, 1, 2, 3, 4, 5];
+let nums4 = [1, 2, 3, 4, 6, 9, 10, 12];
 let brands = ['Samsung', 'Apple', 'OnePlus', 'Vivo', 'Realme', 'Oppo'];
 let arr = [false, 'red', 0, 2, '', null, true, NaN, undefined];
 let basedateUsers = [
@@ -26,6 +27,35 @@ let basedateUsers = [
   { id: 6, name: 'Max', sex: 'M', city: 'Gomel', age: 29 },
   { id: 7, name: 'Aglaya', sex: 'F', city: 'Brest', age: 42 },
 ];
+
+// Вам даны два отсортированных массива, оба из которых содержат только целые числа.
+//Ваша задача — найти способ объединить их в один, отсортированный по возрастанию.
+// Выполните функцию mergeArrays(arr1, arr2), где arr1 и arr2 — исходные отсортированные массивы. Вам не нужно беспокоиться о проверке, так как arr1 и arr2 должны быть массивами с 0 или более целыми числами.
+// Если и arr1, и arr2 пусты, просто верните пустой массив. Примечание: arr1 и arr2 могут быть отсортированы в разном порядке.
+// Также arr1 и arr2 могут иметь одинаковые целые числа.
+// Удалить дубликаты в возвращаемом результате
+const mergeArrays = (arr1 = [5, 2, 3], arr2 = [4, 5, 5]) => {
+  let res = [];
+  if (arr1.length >= 1 || arr2.length >= 1) {
+    res = arr1.concat(arr2);
+    console.log('res :>> ', res);
+    const res2 = [...new Set(res)].sort((a, b) => a - b);
+    return res2;
+  } else return res;
+};
+console.log('mergeArrays :>> ', mergeArrays(nums4, nums3));
+// Given a number n, return the number of positive odd numbers below n, EASY!
+// Examples (Input -> Output)
+// * 7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+// * 15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+function oddCount(n) {
+  let res = [];
+  for (let i = 0; i < n; i++) {
+    if (i % 2 !== 0) res.push(i);
+  }
+  return res;
+}
+console.log('oddCount(7) :>> ', oddCount(15));
 //найти поле с false
 const testObj = {
   name: null,
@@ -68,7 +98,7 @@ let new_nums = nums.reverse();
 
 //пересечение данных массивов
 let new_nums3 = [...new Set(nums)].filter((item) => nums3.includes(item));
-// console.log('new_nums3 :>> ', new_nums3);
+console.log('new_nums3 :>> ', new_nums3);
 // очищение массива
 nums2.splice(0, nums2.length);
 // nums2 = [];

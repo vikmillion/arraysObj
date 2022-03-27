@@ -1,32 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 $bgColor: green;
 $bgColorMain: grey;
 $color: red;
 $colorText: darkBlue;
-$height:20vh;
+$height: 20vh;
 
-@mixin font{
-    font-size: 1.5em;
-    font-weight: 700;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+@mixin font {
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
 }
 * {
   margin: 0;
   padding: 0;
 }
-
-.block:not(.first) {
-  background: $bgColor;
-  height: 10vh;
+body {
+  max-width: 1280px;
   margin: 2% auto;
 }
-.first {
-  background: $bgColorMain;
-  height: 10vh;
+div {
+  padding: 1% 1%;
 }
-#central-div {
-height: $height;
-@include font;
-  li {
-    color: $colorText;
-  }
+p:nth-child(1) {
+  font-weight: 500;
 }

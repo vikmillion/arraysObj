@@ -8,17 +8,37 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="block first"></div>
-    <div class="block" id="central">
-      <ul>
-        <li>Element- 1</li>
-        <li>Element- 2</li>
-        <li>Element- 3</li>
-        <li>Element- 4</li>
-        <li>Element- 5</li>
-      </ul>
+    <div>
+      <p>_.chunk(array, [size=1])</p>
+      <p>
+        Создает массив элементов, разбитых на группы длиной size. Если array
+        нельзя разделить поровну, последним фрагментом будут оставшиеся
+        элементы.
+      </p>
     </div>
-    <div class="block"></div>
-    <script src="./index.js"></script>
+    <div class="chunk" id="chunk"></div>
+    <div>
+      <p>_.findIndex(array, [predicate=_.identity], [fromIndex=0])</p>
+      <p>
+        Этот метод подобен _.find, за исключением того, что он возвращает индекс
+        первого элемента, предикат возвращает true вместо самого элемента.
+      </p>
+    </div>
+    <div id="findIndex"></div>
+
+    <div>
+      <p>_.flatten(array)</p>
+      <p>Выравнивает массив на один уровень в глубину.</p>
+    </div>
+    <div id="flatten"></div>
+    <div>
+      <p>_.flattenDeep(array)</p>
+      <p>Рекурсивно сглаживает массив.</p>
+    </div>
+    <div id="flattenDeep"></div>
+    <!-- script -->
+    <script src="./node_modules/lodash/lodash.min.js"></script>
+    <!-- <script src="./index.js"></script> -->
+    <script src="./lodash.js"></script>
   </body>
 </html>
