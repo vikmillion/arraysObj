@@ -12,10 +12,11 @@ const readAr = () => {
 
 // readAr();
 
-let nums = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+let nums = [1, 2, 3, 4, -5];
 let nums2 = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
 let nums3 = [9, 5, 6, 7, 8, 9, 1, 2, 3, 4, 11, 5, 1, 2, 3, 4, 5];
 let nums4 = [1, 2, 3, 4, 6, 9, 10, 12];
+let nums5 = ['1', 2, '3', 4, 5];
 let brands = ['Samsung', 'Apple', 'OnePlus', 'Vivo', 'Realme', 'Oppo'];
 let arr = [false, 'red', 0, 2, '', null, true, NaN, undefined];
 let basedateUsers = [
@@ -27,7 +28,74 @@ let basedateUsers = [
   { id: 6, name: 'Max', sex: 'M', city: 'Gomel', age: 29 },
   { id: 7, name: 'Aglaya', sex: 'F', city: 'Brest', age: 42 },
 ];
+// Суммирование
+// Напишите программу, которая находит сумму всех чисел от 1 до num. Число всегда будет положительным целым числом больше 0.
+// Например:
+// summation(2) -> 3
+// 1 + 2
+// summation(8) -> 36
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+const summation = (num) => {
+  let sum = 0;
+  for (let i = 1; i < num + 1; i++) {
+    sum += i;
+    console.log('sum, i :>> ', sum, i);
+  }
+  return sum;
+};
+console.log('summation(5) :>> ', summation(3));
 
+// Учитывая массив целых чисел в виде строк и чисел, верните сумму значений массива, как если бы все они были числами.
+// Верните ответ в виде числа.
+function sumMix(x) {
+  return x.map((a) => +a).reduce((a, b) => a + b);
+}
+console.log('sumMix(nums5) :>> ', sumMix(nums5));
+// Напишите функцию bmi, которая вычисляет индекс массы тела (bmi = вес / рост 2 ).
+// если ИМТ <= 18,5, вернуть "Недостаточный вес"
+// если ИМТ <= 25,0, вернуть «Нормальный»
+// если ИМТ <= 30,0 вернуть "Избыточный вес"
+// если ИМТ > 30, верните «Ожирение».
+function bmi(weight, height) {
+  let bmi = weight / (height * height);
+  if (bmi <= 18.5) {
+    return 'Underweight';
+  } else if (bmi <= 25.0) {
+    return 'Normal';
+  } else if (bmi <= 30.0) {
+    return 'Overweight';
+  } else if (bmi > 30) {
+    return 'Obese';
+  }
+}
+console.log('bmi(80,1.80) :>> ', bmi(80, 1.8));
+// Вы получаете массив чисел, возвращаете сумму всех положительных.
+function positiveSum(arr) {
+  return arr.reduce((sum, el) => (el >= 0 ? sum + el : sum), 0);
+}
+console.log('positiveSum(nums) :>> ', positiveSum(nums));
+// Напишите функцию, которая разбивает строку и преобразует ее в массив слов.
+function stringToArray(string) {
+  let arr = string.split(' ');
+  console.log('arr :>> ', arr);
+}
+const str =
+  ' Напишите функцию, которая разбивает строку и преобразует ее в массив слов';
+stringToArray(str);
+
+//--
+function lovefunc(flower1, flower2) {
+  if (flower1 % 2 !== 0 && flower2 % 2 === 0) {
+    return true;
+  } else if (flower1 % 2 === 0 && flower2 % 2 !== 0) {
+    return true;
+  } else if (flower1 % 2 === 0 && flower2 % 2 === 0) {
+    return false;
+  } else if (flower1 % 2 !== 0 && flower2 % 2 !== 0) {
+    return false;
+  }
+}
+console.log(lovefunc(1, 1));
 // Вам даны два отсортированных массива, оба из которых содержат только целые числа.
 //Ваша задача — найти способ объединить их в один, отсортированный по возрастанию.
 // Выполните функцию mergeArrays(arr1, arr2), где arr1 и arr2 — исходные отсортированные массивы. Вам не нужно беспокоиться о проверке, так как arr1 и arr2 должны быть массивами с 0 или более целыми числами.
